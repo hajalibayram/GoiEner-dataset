@@ -29,7 +29,7 @@ This repository contains scripts for processing and cleaning GoiEner's smart met
 
 ## Additional Data
 
-The original SIMEL files provided by GoiEner are available on Zenodo in the "GoiEner smart meters raw data" repository. The processed data are also available in the "GoiEner smart meters data" repository on Zenodo.
+The original SIMEL files provided by GoiEner are available on Zenodo in the ["GoiEner smart meters raw data"](https://zenodo.org/record/7859413) repository. The processed data are also available in the ["GoiEner smart meters data"](https://zenodo.org/record/7362094) repository on Zenodo.
 
 
 ## Contact
