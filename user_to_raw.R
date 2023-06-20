@@ -175,8 +175,8 @@ usr2raw <- function(in_dir, out_dir) {
     )
     
     # Given a file name, return dates, inputs and outputs
-    # out <- foreach (x = 1:length_fnames, .export=export_funs) %dopar% {
-    for (x in 1:length_fnames) {
+    out <- foreach (x = 1:length_fnames, .export=export_funs) %dopar% {
+    #for (x in 1:length_fnames) {
 
       # Set progress bar
       setTxtProgressBar(pb, x/length_fnames)
@@ -254,8 +254,8 @@ if (.Platform$OS.type == "windows") {
   out_log <- "C:/Users/carlos.quesada/Documents/WHY/2023.01.10 - Ficheros paper dataset GoiEner/usr2raw_"
 }
 if (.Platform$OS.type == "unix") {
-  goiener_users_folder  <- "/home/ubuntu/carlos.quesada/disk/goi5/users/"
-  goiener_output_folder <- "/home/ubuntu/carlos.quesada/disk/goi5/raw/"
+  goiener_users_folder  <- "/home/ubuntu/carlos.quesada/disk/goi6/users/"
+  goiener_output_folder <- "/home/ubuntu/carlos.quesada/disk/goi6/raw/"
   out_log <- "/home/ubuntu/carlos.quesada/disk/goi5/usr2raw_"
 }
 
