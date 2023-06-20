@@ -21,6 +21,8 @@ This repository contains scripts for processing and cleaning GoiEner's smart met
 
 ## Workflow
 
+⚠️ Before using the files in this repository, please note that you need to manually change the paths for both input and output folders in the files.
+
 1. **From SIMEL files to USER files (CUPS files)**: The `simel_to_user.R` script collects entries related to each anonymized CUPS from all SIMEL files, and generates individual USER files for each CUPS.
 
 2. **From USER files (CUPS files) to RAW files**: The `user_to_raw.R` script eliminates duplicate entries in each USER file that have the same timestamp. This step ensures the data is accurate and consistent.In addition, it processes the USER files to generate the RAW files in CSV format, extracting and organizing relevant information. 
