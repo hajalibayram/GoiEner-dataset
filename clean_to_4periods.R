@@ -3,22 +3,21 @@
 # CARLOS QUESADA (DEUSTOTECH)
 
 library(lubridate)
-
-difftimezz <- function(a, b) {
-  if(nrow(a) != 0) {
-    return(difftime(a, b, units="days"))
-  } else {
-    return(0)
-  }
-}
+library(foreach)
 
 separate_into_four <- function() {
   # Folder definition
-  input_folder <- "C:/Users/carlos.quesada/Documents/WHY/2023.06.20 - goi6/out/"
-  p1_folder <- "C:/Users/carlos.quesada/Documents/WHY/2023.06.20 - goi6/out_pre/"
-  p2_folder <- "C:/Users/carlos.quesada/Documents/WHY/2023.06.20 - goi6/out_in/"
-  p3_folder <- "C:/Users/carlos.quesada/Documents/WHY/2023.06.20 - goi6/out_pst/"
-  p4_folder <- "C:/Users/carlos.quesada/Documents/WHY/2023.06.20 - goi6/out_p4/"
+  # input_folder <- "C:/Users/carlos.quesada/Documents/WHY/2023.06.20 - goi6/out/"
+  # p1_folder <- "C:/Users/carlos.quesada/Documents/WHY/2023.06.20 - goi6/out_pre/"
+  # p2_folder <- "C:/Users/carlos.quesada/Documents/WHY/2023.06.20 - goi6/out_in/"
+  # p3_folder <- "C:/Users/carlos.quesada/Documents/WHY/2023.06.20 - goi6/out_pst/"
+  # p4_folder <- "C:/Users/carlos.quesada/Documents/WHY/2023.06.20 - goi6/out_p4/"
+  
+  input_folder <- "/home/ubuntu/carlos.quesada/disk/goi6/clean/"
+  p1_folder    <- "/home/ubuntu/carlos.quesada/disk/goi6/clean_sep/pre/"
+  p2_folder    <- "/home/ubuntu/carlos.quesada/disk/goi6/clean_sep/in/"
+  p3_folder    <- "/home/ubuntu/carlos.quesada/disk/goi6/clean_sep/pst/"
+  p4_folder    <- "/home/ubuntu/carlos.quesada/disk/goi6/clean_sep/p4/"
   
   # Dias frontera
   time_A <- ymd_hms("2020-03-01 00:00:00")
