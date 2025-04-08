@@ -11,7 +11,8 @@ class Extractor:
 
         os.makedirs(dataset_dest_dir, exist_ok=True)
 
-    def _safe_tar_filter(self, member, destination_dir):
+    @staticmethod
+    def _safe_tar_filter(member, destination_dir):
         """Ensures extracted files do not escape the destination directory."""
         member_path = Path(destination_dir, member.name)
         if not str(member_path).startswith(str(destination_dir)):
